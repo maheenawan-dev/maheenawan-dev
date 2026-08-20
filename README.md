@@ -12,4 +12,4 @@
    - Mini Game Hub
 
    📫 Connect with me:
-   - LinkedIn: [[your LinkedIn link]](https://www.linkedin.com/in/maheen-irfan-332353405)
+   - LinkedIn: [https://www.linkedin.com/in/maheen-irfan-332353405]
