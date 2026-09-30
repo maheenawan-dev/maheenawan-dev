@@ -17,9 +17,13 @@ BS Information Technology student (7th semester) at UMT, building ML models, Flu
 ## Skills
 
 **Languages:** Python, Dart, JavaScript
+
 **ML/Data:** Pandas, NumPy, Scikit-learn, EDA, SQL
+
 **Mobile:** Flutter, GetX, MVC, Firebase
+
 **Web:** HTML, CSS, PHP, Node.js, Express, REST APIs
+
 **Tools:** Git/GitHub, Docker, VS Code
 
 ## Connect with me
