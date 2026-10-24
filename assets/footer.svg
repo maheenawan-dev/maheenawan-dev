@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" role="img">
+<defs>
+<linearGradient id="ft-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#190B12"/><stop offset="1" stop-color="#451126"/></linearGradient>
+<linearGradient id="ft-ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#701A3D"/><stop offset=".5" stop-color="#E5B5C7"/><stop offset="1" stop-color="#701A3D"/></linearGradient>
+<pattern id="ft-gr" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#C77B9B" stroke-opacity=".08"/></pattern>
+<filter id="ft-gl" x="-20%" y="-300%" width="140%" height="700%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+<rect width="900" height="300" rx="18" fill="#10070C"/>
+<rect width="900" height="300" rx="18" fill="url(#ft-bg)" opacity=".85"><animate attributeName="opacity" values=".7;.95;.7" dur="8s" repeatCount="indefinite"/></rect>
+<rect width="900" height="300" rx="18" fill="url(#ft-gr)"/>
+<rect x="1" y="1" width="898" height="298" rx="17" fill="none" stroke="#C77B9B" stroke-opacity=".35"/>
+<g transform="translate(790,150)">
+<circle r="110" fill="none" stroke="#C77B9B" stroke-opacity=".2"/>
+<circle r="75" fill="none" stroke="#C77B9B" stroke-opacity=".15" stroke-dasharray="3 7"/>
+<circle r="5" fill="#E5B5C7"><animateMotion dur="9s" repeatCount="indefinite" path="M0,-110 a110,110 0 1,1 -0.1,0"/></circle>
+<circle r="4" fill="#C77B9B"><animateMotion dur="6s" repeatCount="indefinite" path="M0,75 a75,75 0 1,0 0.1,0"/></circle>
+</g>
+<text x="50" y="58" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#C77B9B" letter-spacing="3">// OPEN TO REMOTE INTERNSHIPS</text>
+<text x="50" y="125" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#F8F0F3">Let's build something</text>
+<text x="50" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-style="italic" fill="#E5B5C7">worth explaining<tspan fill="#C77B9B">.</tspan></text>
+<rect x="52" y="198" width="360" height="3" rx="1.5" fill="url(#ft-ln)" filter="url(#ft-gl)"/>
+<rect x="52" y="198" width="360" height="3" rx="1.5" fill="url(#ft-ln)"><animate attributeName="width" values="120;360;120" dur="6s" repeatCount="indefinite"/></rect>
+<text x="52" y="238" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#F8F0F3">Maheen Irfan</text>
+<text x="52" y="262" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#E5B5C7" letter-spacing="2">FLUTTER · AI/ML · DATA · BACKEND</text>
+<text x="52" y="282" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#C77B9B" letter-spacing="1">github.com/maheenawan-dev  ·  linkedin.com/in/maheen-irfan-332353405</text>
+<path d="M0 296 C 200 291, 380 299, 600 294 S 800 291, 900 297" fill="none" stroke="#C77B9B" stroke-opacity=".45" stroke-dasharray="6 6"><animate attributeName="stroke-dashoffset" from="0" to="-120" dur="6s" repeatCount="indefinite"/></path>
+</svg>
