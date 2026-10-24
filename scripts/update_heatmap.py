@@ -42,7 +42,7 @@ b = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}"
      f'<rect width="{W}" height="{H}" rx="14" fill="#10070C"/><rect width="{W}" height="{H}" rx="14" fill="url(#hm-bg)" opacity=".75"/>',
      f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="13" fill="none" stroke="#C77B9B" stroke-opacity=".3"/>',
      '<text x="24" y="34" font-family="Consolas,monospace" font-size="12" fill="#C77B9B" letter-spacing="2">COMMIT LOG · REAL GITHUB ACTIVITY</text>',
-     '<text x="24" y="72" font-family="Georgia,serif" font-size="20" fill="#F8F0F3">A year of building, one square at a time.</text>']
+     '<text x="24" y="72" font-family="Georgia,serif" font-size="20" fill="#F8F0F3">One square at a time.</text>']
 # stat boxes (all computed from real data)
 for i, (n, l) in enumerate(((total, "CONTRIBUTIONS"), (active, "ACTIVE DAYS"), (longest, "LONGEST STREAK"))):
     bw = 104
@@ -81,17 +81,18 @@ b.append(f'<text x="{lx + 8 + 5*15 + 4}" y="{H-16}" font-family="{F}" font-size=
 b.append('</svg>')
 inner = "\n".join(b)
 PW, PAD, HEAD = 940, 20, 86
-PH = PAD + HEAD + 16 + H + PAD
-nest_open = f'<svg x="{(PW - W)//2}" y="{PAD + HEAD + 16}" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
+VP = 8
+PH = VP + HEAD + 16 + H + VP
+nest_open = f'<svg x="{(PW - W)//2}" y="{VP + HEAD + 16}" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
 inner = re.sub(r"<svg[^>]*>", nest_open, inner, count=1)
 panel = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {PW} {PH}" width="{PW}" height="{PH}" role="img" aria-label="GitHub contributions: {total} in the last year, {active} active days, longest streak {longest} days">'
   '<defs><linearGradient id="ha-ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#701A3D"/><stop offset=".5" stop-color="#E5B5C7"/><stop offset="1" stop-color="#701A3D"/></linearGradient></defs>'
-  f'<rect width="{PW}" height="{PH}" rx="18" fill="#0B0509"/><rect x="1" y="1" width="{PW-2}" height="{PH-2}" rx="17" fill="none" stroke="#C77B9B" stroke-opacity=".25"/>'
-  f'<rect x="{PAD}" y="{PAD}" width="900" height="{HEAD}" rx="12" fill="#10070C"/>'
-  f'<text x="{PAD+20}" y="{PAD+26}" font-family="Consolas,monospace" font-size="12" fill="#C77B9B" letter-spacing="3">05 / ACTIVITY</text>'
-  f'<text x="{PAD+20}" y="{PAD+64}" font-family="Georgia,serif" font-size="32" fill="#F8F0F3">A year of building.</text>'
-  f'<rect x="{PAD+20}" y="{PAD+76}" width="860" height="2" fill="url(#ha-ln)" opacity=".7"/>'
-  f'<rect x="{PAD+20}" y="{PAD+75}" width="80" height="4" rx="2" fill="#E5B5C7"><animate attributeName="x" values="{PAD+20};{PAD+800};{PAD+20}" dur="9s" repeatCount="indefinite"/></rect>'
+  f'<rect width="{PW}" height="{PH}" fill="#0B0509"/><rect x="1" y="-20" width="{PW-2}" height="{PH+40}" fill="none" stroke="#C77B9B" stroke-opacity=".25"/>'
+  f'<rect x="{PAD}" y="{VP}" width="900" height="{HEAD}" rx="12" fill="#10070C"/>'
+  f'<text x="{PAD+20}" y="{VP+26}" font-family="Consolas,monospace" font-size="12" fill="#C77B9B" letter-spacing="3">05 / ACTIVITY</text>'
+  f'<text x="{PAD+20}" y="{VP+64}" font-family="Georgia,serif" font-size="32" fill="#F8F0F3">A year of building.</text>'
+  f'<rect x="{PAD+20}" y="{VP+76}" width="860" height="2" fill="url(#ha-ln)" opacity=".7"/>'
+  f'<rect x="{PAD+20}" y="{VP+75}" width="80" height="4" rx="2" fill="#E5B5C7"><animate attributeName="x" values="{PAD+20};{PAD+800};{PAD+20}" dur="9s" repeatCount="indefinite"/></rect>'
   + inner + '</svg>')
 open("assets/heatmap.svg", "w", encoding="utf-8").write(panel)
 print(f"heatmap.svg: {len(days)} days, {total} contributions, {active} active days, longest streak {longest}")
